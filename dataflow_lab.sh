@@ -10,7 +10,7 @@ timestamp:timestamp,meter_reading:float,meter_increment:float,ride_status:string
 passenger_count:integer -t taxirides.realtime
 
 # criar bucket - bucket
-export PROJECT_ID=
+export PROJECT_ID=$(gcloud config list project --format "value(core.project)")
 export BUCKET_NAME=$PROJECT_ID-bucket
 gsutil mb gs://$BUCKET_NAME/
 
