@@ -7,7 +7,7 @@ gcloud services enable dataproc.googleapis.com
 
 # Evironment Variables
 export CLUSTER_NAME=example-cluster
-export PROJECT_ID=qwiklabs-gcp-02-025e41812b76
+export PROJECT_ID=$(gcloud config list project --format "value(core.project)")
 
 # Create Cluster
 gcloud dataproc clusters create $CLUSTER_NAME \
